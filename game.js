@@ -146,11 +146,7 @@ var game = {
      * @inner
      * @description container for views of the application
      */
-    views: {
-        home: {
-            init: function () {}
-        }
-    },
+    views: {},
 
     /**
      * @name settings
