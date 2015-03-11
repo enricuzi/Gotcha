@@ -74,7 +74,7 @@ var game = {
          * @description start loading images
          */
         load: function (manifest) {
-            var loader = new createjs.LoadQueue();
+            var loader = new createjs.LoadQueue(false);
             loader.loadManifest(manifest);
             loader.on("fileload", this.loading);
             loader.on("complete", this.loaded);
