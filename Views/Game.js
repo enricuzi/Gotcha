@@ -16,6 +16,13 @@ game.views.game = {
         game.stage.canvas.width = game.settings.tile_width * game.track.col;
         game.stage.canvas.height = game.settings.tile_height * game.track.row;
 
+        /* DEBUG */
+        game.debug.fps = game.widgets.Score(0);
+        game.debug.fps.property("color", "grey");
+        game.debug.fps.x = game.stage.canvas.width/2;
+        game.debug.fps.y = game.stage.canvas.height/2;
+        game.stage.addChild(game.debug.fps);
+
         /* For each player in the game */
         for (var i in game.settings.players) {
             var player = game.settings.players[i];
@@ -149,6 +156,9 @@ game.views.game = {
      * @function play
      */
     play: function () {
+        /* DEBUG */
+        game.debug.fps.text = createjs.Ticker.getMeasuredFPS();
+
         /* For each car in game */
         for (var i in game.cars.set) {
             var car = game.cars.set[i];

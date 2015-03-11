@@ -1,6 +1,13 @@
 /** @namespace */
 var game = {
     /**
+     * @name debug
+     * @memberOf game
+     * @inner
+     * @description container for objects used to debug components
+     */
+    debug: {},
+    /**
      * @name widgets
      * @memberOf game
      * @inner
