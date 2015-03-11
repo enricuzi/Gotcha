@@ -157,7 +157,7 @@ game.views.game = {
      */
     play: function () {
         /* DEBUG */
-        game.debug.fps.text = createjs.Ticker.getMeasuredFPS();
+        game.debug.fps.text = Math.floor(createjs.Ticker.getMeasuredFPS());
 
         /* For each car in game */
         for (var i in game.cars.set) {

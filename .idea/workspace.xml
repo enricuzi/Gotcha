@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="00dc2ba3-723d-44bb-8312-8f01dfa4af34" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Game.js" afterPath="$PROJECT_DIR$/Views/Game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.js" afterPath="$PROJECT_DIR$/game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MicroMachines.iws" />
@@ -83,8 +80,8 @@
       <file leaf-file-name="Game.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Views/Game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32885906" vertical-offset="3281" max-vertical-offset="4550">
-              <caret line="143" column="48" selection-start-line="143" selection-start-column="48" selection-end-line="143" selection-end-column="48" />
+            <state vertical-scroll-proportion="2.0346756" vertical-offset="2156" max-vertical-offset="4550">
+              <caret line="159" column="74" selection-start-line="159" selection-start-column="74" selection-end-line="159" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -324,12 +321,20 @@
       <option name="number" value="Default" />
       <updated>1425113325065</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added Debug container">
+      <created>1426062816754</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1426062816754</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -366,6 +371,8 @@
       <TodoPanelSettings />
     </option>
     <option name="LIMIT_HISTORY" value="false" />
+    <MESSAGE value="Added Debug container" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Debug container" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -748,8 +755,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/Game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32885906" vertical-offset="3281" max-vertical-offset="4550">
-          <caret line="143" column="48" selection-start-line="143" selection-start-column="48" selection-end-line="143" selection-end-column="48" />
+        <state vertical-scroll-proportion="2.0346756" vertical-offset="2156" max-vertical-offset="4550">
+          <caret line="159" column="74" selection-start-line="159" selection-start-column="74" selection-end-line="159" selection-end-column="74" />
           <folding />
         </state>
       </provider>
