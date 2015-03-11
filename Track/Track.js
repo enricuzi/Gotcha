@@ -173,8 +173,9 @@ game.track = {
          * @description generate a random powerup
          */
         getPowerup: function (index) {
-            var type = game.events.loadPowerups(index);
-            var power = game.powerups[type](game.images.set[type], {power: 2});
+            var powerup = game.events.loadPowerups(index);
+            var params = {attribute: powerup.attribute, power: powerup.value, last: powerup.last};
+            var power = game.powerups[powerup.name](game.images.set[powerup.image], params);
             var tile = game.track.getTile();
             while (!tile) {
                 tile = game.track.getTile();

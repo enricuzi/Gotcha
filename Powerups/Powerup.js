@@ -33,6 +33,18 @@ game.powerups.Powerup = function (image, params) {
     power.power = power.params.power;
 
     /**
+     * attribute - what the power will boost
+     * @type {string}
+     */
+    power.attribute = power.params.attribute;
+
+    /**
+     * last - how much time last the powerup applyed to the car
+     * @type {number}
+     */
+    power.last = power.params.last;
+
+    /**
      * @method get
      * @param {*|{string}}
      * @returns {{string}}
@@ -42,6 +54,7 @@ game.powerups.Powerup = function (image, params) {
             return power.params[property];
         return power.power;
     };
+
     /**
      * @method set
      * @param {string}
@@ -55,6 +68,31 @@ game.powerups.Powerup = function (image, params) {
             if (property == "power")
                 power.power = value;
         }
+    };
+
+    /**
+     * @method boost
+     * @param {{string}|{createjs.Bitmap}}
+     */
+    power.boost = function (car) {
+
+        /* Get the car to boost */
+        var car = game.cars.get(car);
+
+        /* Get the attribute to boost */
+        var attributes = power.attribute.split(".");
+        var value = "car[attributes[0]]";
+        for (var i=1; i<attributes.length; i++)
+            value += "[attributes[" + i + "]]";
+        value += "*= power.power";
+
+        /* Evaluate the an expression like: 'car[attributes[0]][attributes[1]]...*= power.power' */
+        eval(value);
+
+        /* Set how the power have to last */
+        power.timout = setTimeout(function () {
+            car /= power.power;
+        }, power.last);
     };
     return power;
 };

@@ -29,7 +29,7 @@ game.objects.Car = function (image) {
      * Speed Configuration: {max: max speed reachable, acceleration: incrementation speed step, current: actual speed value}
      * @type {{max: number, acceleration: number, current: number}}
      */
-    car.speed = {max: 5, acceleration: 1, current: 0};
+    car.speed = {max: 10, acceleration: 1, current: 0};
 
     /**
      * Rotation configuration: {rotation: value to reach, speed: incrementation step, current: actual rotation value}

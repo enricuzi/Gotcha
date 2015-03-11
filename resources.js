@@ -6,7 +6,7 @@ var manifest = function () {
         {src: "img/tile_rect.png", id: "tile_rect"},
         {src: "img/tile_curve_background.png", id: "tile_curve_background"},
         {src: "img/tile_rect_background.png", id: "tile_rect_background"},
-        {src: "img/speed.png", id: "Speed"}
+        {src: "img/speed.png", id: "speed"}
     ];
 };
 
@@ -65,6 +65,19 @@ var tracks = function () {
 
 var powerups = function () {
     return [
-        "Speed"
+        {
+            name: "Speed",
+            attribute: "speed.max",
+            value: 4,
+            last: 2000,
+            image: "speed"
+        },
+        {
+            name: "Speed",
+            attribute: "speed.max",
+            value: 2,
+            last: 4000,
+            image: "speed"
+        }
     ];
 };

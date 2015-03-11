@@ -97,9 +97,7 @@ game.views.game = {
 
                 /* Freeze the car and wait for a random restart */
                 car.timeout = setTimeout(function () {
-                    var start = game.track.getStart();
-                    start.empty = false;
-                    game.events.callback.resetCarOnTile(car, game.track.matrix[start.row][start.col].tile);
+                    game.events.callback.resetCarOnTile(car, tile);
                 }, 1000);
             }
             /* If no collision between car and tile */
@@ -145,6 +143,16 @@ game.views.game = {
                             game.events.addTicker(game.views.game.play);
                         }, 1000);
                     }
+                }
+
+                /* Check for a collision with the powerup */
+                if (game.track.powerup.power && !game.track.powerup.power.timeout && game.events.rectCollision(car, game.track.powerup.power)) {
+                    game.track.powerup.power.boost(car);
+                    game.stage.removeChild(game.track.powerup.power);
+                    game.track.powerup.power = null;
+                    setTimeout(function () {
+                        game.track.powerup.generatePowerup();
+                    }, 2000);
                 }
             }
         });
