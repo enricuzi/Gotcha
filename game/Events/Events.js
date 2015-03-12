@@ -89,7 +89,7 @@ game.events = {
      * @returns {boolean}
      */
     rectCollision: function (image1, image2) {
-        return ndgmr.checkPixelCollision(image1, image2);
+        return ndgmr.checkRectCollision(image1, image2);
     },
     /**
      * @memberOf events

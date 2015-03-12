@@ -90,6 +90,7 @@ var game = {
         loading: function (e) {
             if (e.item.type == createjs.LoadQueue.IMAGE) {
                 game.images.set[e.item.id] = e.result;
+                game.images.set[e.item.id].crossOrigin = "anonymous";
             }
         },
 
