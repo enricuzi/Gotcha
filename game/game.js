@@ -7,6 +7,7 @@ var game = {
      * @description container for objects used to debug components
      */
     debug: {},
+
     /**
      * @name widgets
      * @memberOf game
