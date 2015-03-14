@@ -12,7 +12,10 @@ game.views.home = {
 
         play.x = stage.canvas.width/2 - play.image.width/2;
         play.y = stage.canvas.height/3;
+<<<<<<< HEAD
         play.cursor = "pointer";
+=======
+>>>>>>> origin/master
         game.events.addEvent("click", function (e) {
             game.stage.removeAllChildren();
             game.views.game.init();
@@ -20,9 +23,14 @@ game.views.home = {
 
         settings.x = stage.canvas.width/2 - settings.image.width/2;
         settings.y = stage.canvas.height/3*2;
+<<<<<<< HEAD
         settings.cursor = "pointer";
         game.events.addEvent("click", function (e) {
             game.stage.canvas.getContext("2d").clearRect(0, 0, game.stage.canvas.width, game.stage.canvas.height);
+=======
+        game.events.addEvent("click", function (e) {
+            game.stage.removeAllChildren();
+>>>>>>> origin/master
             //game.views.settings.init();
         }, settings);
 
