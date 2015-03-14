@@ -143,7 +143,7 @@ game.events = {
          * @function loadImageComplete
          */
         loadImagesComplete: function () {
-            game.views.game.init();
+            game.views.home.init();
             game.stage.update();
         },
         /**

@@ -6,7 +6,9 @@ var manifest = function () {
         {src: "img/tile_rect.png", id: "tile_rect"},
         {src: "img/tile_curve_background.png", id: "tile_curve_background"},
         {src: "img/tile_rect_background.png", id: "tile_rect_background"},
-        {src: "img/speed.png", id: "speed"}
+        {src: "img/speed.png", id: "speed"},
+        {src: "img/play.png", id: "play"},
+        {src: "img/settings.png", id: "settings"}
     ];
 };
 

@@ -28,27 +28,31 @@ game.views.game = {
             var player = game.settings.players[i];
             player.id = i;
 
-            /* Generate a car */
-            game.events.loadCar(player);
+            /* Check if is playable */
+            if (player.enabled) {
 
-            /* Place the car on a start point of track */
-            game.track.setCar(game.cars.set[player.car]);
+                /* Generate a car */
+                game.events.loadCar(player);
 
-            /* Attach a score label */
-            player.score = game.widgets.Score(0);
-            switch (Number(i)) {
-                case 0:
-                    player.score.property("color", "red");
-                    player.score.x = player.score.y = 0;
-                    break;
-                case 1:
-                    player.score.property("color", "yellow");
-                    player.score.x = game.stage.canvas.width - 50;
-                    player.score.y = 0;
-                    break;
+                /* Place the car on a start point of track */
+                game.track.setCar(game.cars.set[player.car]);
+
+                /* Attach a score label */
+                player.score = game.widgets.Score(0);
+                switch (Number(i)) {
+                    case 0:
+                        player.score.property("color", "red");
+                        player.score.x = player.score.y = 0;
+                        break;
+                    case 1:
+                        player.score.property("color", "yellow");
+                        player.score.x = game.stage.canvas.width - 50;
+                        player.score.y = 0;
+                        break;
+                }
+                player.score.refresh();
+                game.stage.addChild(player.score);
             }
-            player.score.refresh();
-            game.stage.addChild(player.score);
         }
 
         /* Generate a random Powerup */

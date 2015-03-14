@@ -7,6 +7,7 @@ var game = {
      * @description container for objects used to debug components
      */
     debug: {},
+
     /**
      * @name widgets
      * @memberOf game
@@ -173,14 +174,16 @@ var game = {
          */
         players: [
             {
-                /*arrows*/
-                controls: {left: 37, up: 38, right: 39, down: 40},
-                car: "car_red"
+                /*arrows left: 37, up: 38, right: 39, down: 40*/
+                controls: {},
+                car: "",
+                enabled: false
             },
             {
-                /*wasd*/
-                controls: {left: 65, up: 87, right: 68, down: 83},
-                car: "car_yellow"
+                /*wasd left: 65, up: 87, right: 68, down: 83*/
+                controls: {},
+                car: "",
+                enabled: false
             }
         ],
 

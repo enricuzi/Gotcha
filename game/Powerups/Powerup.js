@@ -89,9 +89,10 @@ game.powerups.Powerup = function (image, params) {
         /* Evaluate the an expression like: 'car[attributes[0]][attributes[1]]...*= power.power' */
         eval(value);
 
-        /* Set how the power have to last */
+        /* Set how the power will last */
         power.timout = setTimeout(function () {
-            car /= power.power;
+            value = value.replace("*", "/");
+            eval(value);
         }, power.last);
     };
     return power;

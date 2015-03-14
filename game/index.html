@@ -3,9 +3,73 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Create JS</title>
-    <style>canvas {
-        border: 1px solid black;
-    }</style>
+    <style>
+        canvas {
+            border: 1px solid black;
+            float: left;
+            clear: both;
+        }
+
+        #menu {
+        }
+
+        #menu ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        #menu li {
+            position: relative;
+            float: left;
+            width: 140px;
+            text-align: center;
+            list-style: none;
+            background-color: #454545;
+            color: #FFF;
+            padding: 15px 5px;
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+        }
+
+        #menu li label  {
+        }
+
+        #menu li label:hover {
+            background-color: #4d4d4d;
+            text-shadow: 0px 0px 1px #FFF;
+        }
+
+        #menu li > input[type="text"], #menu li > select {
+            height: 25px;
+        }
+
+        #menu ul ul {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        #menu ul li:hover > ul {
+            visibility: visible;
+        }
+
+        #menu ul ul:hover {
+            box-shadow: 0px 20px 30px #7C7C7C;
+        }
+
+        #menu ul ul li label {
+            background-color: #3A3A3A;
+        }
+
+        #menu ul ul li label:hover {
+            background-color: #3F3F3F;
+        }
+
+        #menu ul ul ul {
+            margin-left: 140px;
+            top: 0px;
+        }
+    </style>
     <script src="resources.js"></script>
     <script src="js/createjs.js"></script>
     <script src="js/collision-detection.js"></script>
@@ -23,8 +87,23 @@
     <script src="Objects/Car.js"></script>
 </head>
 
-<body onLoad="game.init()">
+<body onLoad="game.init();initMenu();">
+<div id="menu">
+    <!-- Lista generale -->
+    <ul>
+        <!-- 1° Elemento -->
+        <li><label>Home</label></li>
+
+        <!-- 2° Elemento -->
+        <li>
+            <label>Settings</label>
+        </li>
+    </ul>
+</div>
 <canvas id="canvas">Your browser does not support canvas...Just get Chrome</canvas>
+
+
+<script src="js/script.js"></script>
 </body>
 
 </html>
