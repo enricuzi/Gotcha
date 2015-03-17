@@ -49,6 +49,15 @@ game.views.game = {
                         player.score.x = game.stage.canvas.width - 50;
                         player.score.y = 0;
                         break;
+                    case 2:
+                        player.score.property("color", "violet");
+                        player.score.x = 0;
+                        player.score.y = game.stage.canvas.height - 20;
+                        break;
+                    case 3:
+                        player.score.property("color", "blue");
+                        player.score.x = game.stage.canvas.width - 50;
+                        player.score.y = game.stage.canvas.height - 20;
                 }
                 player.score.refresh();
                 game.stage.addChild(player.score);

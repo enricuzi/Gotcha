@@ -184,6 +184,16 @@ var game = {
                 controls: {},
                 car: "",
                 enabled: false
+            },
+            {
+                controls: {},
+                car: "",
+                enabled: false
+            },
+            {
+                controls: {},
+                car: "",
+                enabled: false
             }
         ],
 
